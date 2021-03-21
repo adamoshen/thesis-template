@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# pdfx files
+*.lua
+*.timestamp
+*.xmpdata
+*.xmpi
