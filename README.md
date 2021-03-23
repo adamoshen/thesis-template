@@ -31,9 +31,10 @@ New compile order: `XeLaTeX (PDFA)` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX 
 ## Differences between `main.tex` and `main-PDFA.tex`
 
 The PDF/A creation is done through the `pdfx` package. As recommended in the documentation, `pdfx` should be the first package
-loaded. In addition, `pdfx` loads `hyperref` (and other packages), so `\hypersetup` should be used to configure options for 
-`hyperref`. For regular PDFs, the `pdfx` package does not need to be loaded and `hyperref` can be loaded as usual (with 
-consideration for any other packages that may also load `hyperref`.)
+loaded. In addition, `pdfx` loads `hyperref` (and other packages - see [`pdfx` documentation](https://ctan.org/pkg/pdfx) for the
+full list), so `\hypersetup` should be used to configure options for `hyperref`. For regular PDFs, the `pdfx` package does not need
+to be loaded and `hyperref` can be loaded as usual (with consideration for any other packages that may also load `hyperref`.)
 
 For regular PDFs, metadata can be supplied in the options of `hyperref`. For PDF/A, metadata is supplied through the
-`\jobname.xmpdata` file, where `\jobname` is the name of the `.tex` file.
+`\jobname.xmpdata` file, where `\jobname` is the name of the `.tex` file. See [`pdfx` documentation](https://ctan.org/pkg/pdfx) for
+the full list of supported metadata options.
