@@ -27,5 +27,3 @@ to the end.
 
 New compile order: `XeLaTeX (PDFA)` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX (PDFA)` &rightarrow; `XeLaTeX (PDFA)` &rightarrow;
 `View PDF`.
-
-(Alternatively, the above compile order can be combined into a new single custom command in the same `Edit User Commands` menu.)
