@@ -8,7 +8,8 @@ Compile order: `XeLaTeX` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX` &rightarro
 
 ## PDF/A
 
-As per the [`pdfx` documentation](https://ctan.org/pkg/pdfx), `-shell-escape` needs to be added as an option for XeLaTeX. 
+As per the [`pdfx` documentation](https://ctan.org/pkg/pdfx), `-shell-escape` needs to be added as an option for XeLaTeX. Instead of
+modifying the existing `XeLaTeX` build command, create a new one.
 
 1.  In `Texmaker`, go to `User` &rightarrow; `User Commands` &rightarrow; `Edit User Commands`.
 
@@ -26,3 +27,5 @@ to the end.
 
 New compile order: `XeLaTeX (PDFA)` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX (PDFA)` &rightarrow; `XeLaTeX (PDFA)` &rightarrow;
 `View PDF`.
+
+(Alternatively, the above compile order can be combined into a new single custom command in the same `Edit User Commands` menu.)
