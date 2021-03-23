@@ -1,0 +1,77 @@
+\chapter{Data preparation}
+
+\section{First section}
+
+\lipsum[8-9]
+
+\section{Second section}
+
+\lipsum[10-11]
+
+\clearpage
+
+\newgeometry{margin=0.7in}
+
+\begin{landscape}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+\ttt{user\_id}
+& \ttt{status\_id}
+& \ttt{created\_at}
+& \ttt{text}
+& \ttt{is\_retweet}
+& \ttt{hashtags}
+& \ttt{lang}\\
+\toprule
+%
+833499844517961728 
+& 1255290686250811392 
+& 2020-04-29 00:19:56
+& \pbox{8cm}{The NY Dem Presidential Primary on\\ 6/23 is canceled due to COVID-19. Other elections on 6/23 will still take place:\\ https://t.co/0P6PMPq20h\\ - Rock the Vote}
+& \ttt{FALSE}
+& \ttt{NA}
+& en\\
+\midrule
+581180392 
+& 1254511313331597314 
+& 2020-04-26 20:42:59
+& \pbox{8cm}{In the midst of the current \#pandemic, it is more important than ever to get creative\\ with your \#homeworkout. One great\\ \#trainfromhome option includes making a sandbag from a laundry bag. Here's how to implement sandbag circuits:\\ https://t.co/Ottxy2YZAq}
+& \ttt{FALSE}
+& \pbox{6cm}{\ttt{"pandemic",}\\ \ttt{"homeworkout",}\\ \ttt{"trainfromhome"}}
+& en\\
+\midrule
+819296296062201857
+& 1304087649011953665
+& 2020-09-10 16:01:38
+& \pbox{8cm}{\#Masks serve 2 purposes:\\[3mm] 1) To remind everyone that there is supposed to be a deadly pandemic, despite nobody knowing anybody who is sick with covid, and \\[3mm] 2) To increase incidence of pulmonary illnesses, which will later be blamed on covid. Proof: See my pinned tweet.}
+& \ttt{FALSE}
+& \ttt{"Masks"}
+& en\\
+\midrule
+2350488460 
+& 1322387795718119425
+& 2020-10-31 03:59:53
+& \pbox{8cm}{\#GOPBetrayedAmerica decisions are being made to take your voice/vote away. The same \#GOPCorruptionOverCountry that\\ won't respond with help for every American\\ during this once a century pandemic\\ https://t.co/Gg5gecx7tb}
+& \ttt{FALSE}
+& \pbox{6cm}{\ttt{"GOPBetrayedAmerica",}\\ \ttt{"GOPCorruptionOverCountry"}}
+& en\\
+\bottomrule
+\end{tabular}}
+\caption{\label{tbl:tweetsample}This caption describes the above table.}
+\end{table}
+
+\end{landscape}
+
+\clearpage
+
+\restoregeometry
+
+\section{Third section}
+
+\lipsum[12-13]
+
+Did you see \autoref{tbl:tweetsample}?
