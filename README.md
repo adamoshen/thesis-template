@@ -16,7 +16,7 @@ As per the [`pdfx` documentation](https://ctan.org/pkg/pdfx), `-shell-escape` ne
 
 ![](./readme_img/newcommand.png)
 
-which borrows the default options from `XeLaTeX` (can be auto-populated by using the `wizard`) and just appends `-shell-escape` to the
+by borrowing the default options from `XeLaTeX` (can be auto-populated by using the `wizard`) and appending `-shell-escape` to the
 end.
 
 New compile order: `XeLaTeX (PDFA)` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX (PDFA)` &rightarrow; `XeLaTeX (PDFA)` &rightarrow;
