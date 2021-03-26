@@ -75,3 +75,42 @@
 \lipsum[12-13]
 
 Did you see \autoref{tbl:tweetsample}?
+
+\begin{algorithm}[h]
+	\small
+	\begin{algorithmic}
+		\REQUIRE Number of topics $K$, Dirichlet hyperparameters $\alpha$ and $\beta$, collection
+		of biterms $\mathbf{B}$
+		\ENSURE $\widehat{\bm{\theta}}$, $\widehat{\bm{\Phi}}$
+		\STATE Randomly assign a topic to all biterms, $b_{i} \,=\, (w_{i,1},\,w_{i,2}) \,\in\, 
+		\mathbf{B}$
+		\FOR{$iter=1$ to $N$}
+			\FORALL{biterm, $b_{i}$}
+				\STATE Update topic assignment of $b_{i}$ according to \autoref{eqn:btm_conditional}
+				\STATE Update $n_{k}$, $n_{w_{i,1}|k}$, $n_{w_{i,2}|k}$
+			\ENDFOR
+		\ENDFOR
+		\STATE Compute estimates for $\bm{\theta}$ and $\bm{\Phi}$ using \autoref{eqn:btm_theta} and
+		\autoref{eqn:btm_phi}, respectively
+	\end{algorithmic}
+	\caption{\label{alg:btm}Collapsed Gibbs sampling algorithm for BTM.}
+\end{algorithm}
+
+\begin{equation}
+P(z_{i}=k\,|\,\mathbf{z}_{(i)},\,\textbf{B}) \,\propto\, (n_{(i),\,k} + \alpha)
+\frac{(n_{(i),\,w_{i,1}\,|\,k} + \beta)(n_{(i),\,w_{i,2}\,|\,k} + \beta)}
+{(\sum_{w=1}^{W}n_{(i),\,w\,|\,k} + W\beta + 1)(\sum_{w=1}^{W}n_{(i),\,w\,|\,k} + W\beta)},
+\label{eqn:btm_conditional}
+\end{equation}
+
+\begin{equation}
+\widehat{\theta}_{k} \,=\, \frac{n_{k} \,+\, \alpha}{N_{B} \,+\, K\alpha}
+\label{eqn:btm_theta}
+\end{equation}
+
+\begin{equation}
+\widehat{\phi}_{k,w} \,=\, \frac{n_{w\,|\,k} \,+\, \beta}{\sum_{w=1}^{W}n_{w\,|\,k} \,+\, W\beta}
+\label{eqn:btm_phi}
+\end{equation}
+
+\lipsum[14] Go and re-read \autoref{alg:btm}!
