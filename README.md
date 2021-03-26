@@ -1,6 +1,7 @@
 # A (Xe)LaTeX Thesis Template
 
-A (Xe)LaTeX thesis template to be compiled to either PDF or PDF/A. Tested with `Texmaker` for Windows.
+A (Xe)LaTeX thesis template conforming to Carleton University's thesis formatting guidelines. To be compiled to either PDF or PDF/A.
+Tested with `Texmaker` for Windows.
 
 ## Regular PDF
 
@@ -17,7 +18,8 @@ modifying the existing `XeLaTeX` build command, create a new one.
 
 ![](./readme_img/newcommand.png)
 
-by borrowing the default options from `XeLaTeX` (use the `wizard` to auto-populate this field as it may depend on your OS) and appending 
+by borrowing the default options from `XeLaTeX` (use the `wizard` to auto-populate this field as it may depend on your OS) and
+appending 
 
 ```
 -shell-escape
