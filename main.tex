@@ -52,6 +52,16 @@
 
 \begin{document}
 
+% To get list of algorithms into the TOC - from `algorithms` documentation
+\renewcommand{\listofalgorithms}{\begingroup
+	\tocfile{List of Algorithms}{loa}
+\endgroup}
+
+\makeatletter
+\let\l@algorithm\l@figure
+\makeatother
+
+
 \pagenumbering{roman}
 
 \include{ch0-frontmatter}
