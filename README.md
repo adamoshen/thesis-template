@@ -17,7 +17,7 @@ modifying the existing `XeLaTeX` build command, create a new one.
 
 ![](./readme_img/newcommand.png)
 
-by borrowing the default options from `XeLaTeX` (can be auto-populated by using the `wizard`) and appending 
+by borrowing the default options from `XeLaTeX` (should be auto-populated by using the `wizard` as it may depend on your OS) and appending 
 
 ```
 -shell-escape
