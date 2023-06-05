@@ -1,0 +1,47 @@
+\begin{filecontents*}{\jobname.xmpdata}
+\Title{Thesis Title Line One Optional Second Line}
+\Author{Adam Shen}
+\Language{en-GB}
+\Copyright{2021 Adam Shen}
+\Copyrighted{True}
+\end{filecontents*}
+
+\documentclass[12pt,letterpaper]{report}
+
+\usepackage{CU-thesis-pdfa}
+\graphicspath{{./img/}} % Change as necessary
+
+\newcommand{\thesistitleI}{Thesis Title Line One}
+\newcommand{\thesistitleII}{Optional Second Line}
+\newcommand{\myname}{Adam Shen}
+
+\begin{document}
+
+% To get list of algorithms into the TOC - from `algorithms` documentation
+\renewcommand{\listofalgorithms}{\begingroup
+	\tocfile{List of Algorithms}{loa}
+\endgroup}
+
+\makeatletter
+\let\l@algorithm\l@figure
+\makeatother
+
+% Compile specified chapters only
+%\includeonly{ch0-frontmatter,ch1-introduction}
+
+\pagenumbering{roman}
+
+\include{ch0-frontmatter}
+
+\pagenumbering{arabic}
+
+\include{ch1-introduction}
+
+\include{ch2-content}
+
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography}
+
+\label{endmainmatter} % For automatic counting of pages
+
+\end{document}
