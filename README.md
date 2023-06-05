@@ -5,9 +5,15 @@ Tested with `Texmaker` for Windows.
 
 ## Regular PDF
 
+- Ensure that your `main.tex` includes `\usepackage{CU-thesis}`
+- Modify the `CU-thesis.sty` file to your liking
+
 Compile order: `XeLaTeX` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX` &rightarrow; `XeLaTeX` &rightarrow; `View PDF`
 
 ## PDF/A
+
+- Ensure that your `main-PDFA.tex` includes `\usepackage{CU-thesis-pdfa}`
+- Modify the `CU-thesis-pdfa.sty` file to your liking
 
 As per the [`pdfx` documentation](https://ctan.org/pkg/pdfx), `-shell-escape` needs to be added as an option for XeLaTeX. Instead of
 modifying the existing `XeLaTeX` build command, create a new one.
