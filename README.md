@@ -12,7 +12,7 @@ Compile order: `XeLaTeX` &rightarrow; `BibTeX` &rightarrow; `XeLaTeX` &rightarro
 
 ## PDF/A
 
-- Ensure that your `main-PDFA.tex` includes `\usepackage{CU-thesis-pdfa}`
+- Ensure that your `main-pdfa.tex` includes `\usepackage{CU-thesis-pdfa}`
 - Modify the `CU-thesis-pdfa.sty` file to your liking
 
 As per the [`pdfx` documentation](https://ctan.org/pkg/pdfx), `-shell-escape` needs to be added as an option for XeLaTeX. Instead of
