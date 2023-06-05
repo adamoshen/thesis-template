@@ -5,58 +5,14 @@
 \Copyright{2021 Adam Shen}
 \Copyrighted{True}
 \end{filecontents*}
+
 \documentclass[12pt,letterpaper]{report}
-\usepackage[a-1b]{pdfx} % Loads hyperref (and others) by default - see documentation
-\usepackage[top=1in,right=1in,bottom=1in,left=1.5in]{geometry}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{parskip}
-\setlength{\parindent}{1.5em}
-\setlength{\parskip}{3mm}
-\usepackage{graphicx}
-\graphicspath{{./img/}} % Change as necessary
-\usepackage{setspace} 
-\doublespacing
-\usepackage{enumitem} % For \begin{enumerate}[label=(\alph*)]
-\usepackage[sort&compress]{natbib}
-\setcitestyle{numbers,comma,super,open={},close={}}
-\hypersetup{hidelinks,colorlinks=true,allcolors=blue,linktocpage,breaklinks} % since hyperref already loaded
-\usepackage[nottoc]{tocbibind}
-\usepackage{url}
-\def\UrlBreaks{\do\/\do-}
-\usepackage{booktabs}
-\usepackage{float}
-\usepackage{caption}
-\captionsetup[figure]{font=small} 
-\captionsetup[table]{font=small} % Comment out if no tables
-\captionsetup[algorithm]{font=small} % Comment out if no algs
-\usepackage{subcaption} % Comment out if no subfigures
-\usepackage{lipsum} % Demo text
-\usepackage{color}
-\usepackage{bm} % Bold math symbols
-\usepackage{pbox} % For fitting big things into tables
-\usepackage{pdflscape} % Comment out if no landscape pages
-\usepackage{algorithmic} % Comment out if no algs
-\usepackage{algorithm} % Comment out if no algs
 
-% Algorithm stuff
-\newcommand{\algorithmautorefname}{Algorithm}
-\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-\renewcommand{\algorithmicensure}{\textbf{Output:}}
-\renewcommand{\algorithmicforall}{\textbf{for each}}
+\usepackage{CU-thesis-pdfa}
 
-
-\newcommand{\ttt}[1]{\texttt{#1}}
-\newcommand{\blue}[1]{{\color{blue}#1}}
 \newcommand{\thesistitleI}{Thesis Title Line One}
 \newcommand{\thesistitleII}{Optional Second Line}
 \newcommand{\myname}{Adam Shen}
-
-
-% Compile specified chapters only
-%\includeonly{ch0-frontmatter,ch1-introduction}
 
 \begin{document}
 
@@ -69,22 +25,18 @@
 \let\l@algorithm\l@figure
 \makeatother
 
+% Compile specified chapters only
+%\includeonly{ch0-frontmatter,ch1-introduction}
 
 \pagenumbering{roman}
 
 \include{ch0-frontmatter}
 
-\clearpage
-
 \pagenumbering{arabic}
 
 \include{ch1-introduction}
 
-\clearpage
-
 \include{ch2-content}
-
-\clearpage
 
 \bibliographystyle{unsrtnat}
 \bibliography{bibliography}
